@@ -2,6 +2,7 @@
   <div class="status-footer">
     <span v-if="status === IStatus.READY">Ready</span>
     <span v-if="status === IStatus.PLAYING">Playing</span>
+    <span v-if="status === IStatus.WAITING">Waiting</span>
     <a v-if="status === IStatus.PASSED" @click.prevent.stop="reset">Play again</a>
     <span class="time-cost">{{ timeCost }} s</span>
   </div>

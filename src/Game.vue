@@ -43,24 +43,24 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+#game {
+  width: 100%;
+  height: 100%;
+}
 </style>
 
 <style scoped>
 .game-panel {
-  width: 450px;
-  height: 670px;
-  border: 4px solid #bdbdbd;
-  border-radius: 2px;
-  background-color: #faf8ef;
-  padding: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
 @media screen and (max-width: 450px) {
   .game-panel {
-    width: 100%;
-    height: 100%;
     justify-content: space-around;
   }
 }

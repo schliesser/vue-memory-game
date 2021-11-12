@@ -1,18 +1,27 @@
 export enum IStatus {
   READY = 'READY',
   PLAYING = 'PLAYING',
-  PASSED = 'PASSED'
+  PASSED = 'PASSED',
+  WAITING = 'WAITING',
 }
 
 export const ALL_CARD_NAMES = [
-  '8-ball',
-  'kronos',
-  'baked-potato',
-  'dinosaur',
-  'rocket',
-  'skinny-unicorn',
-  'that-guy',
-  'zeppelin'
+  'Auto_Hupe',
+  'Vorhang_zuziehen',
+  'Geschirr_zerschlagen',
+  'Klopfen_Holztuere',
+  'Schulklingel',
+  'Getraenkedose_oeffnen',
+  'Laub_fegen',
+  'Streichholz',
+  'Wasserglas_einschenken',
+  'Fahrradklingel',
+  'Donner',
+  'Schiffanker',
+  'Internet_Modem',
+  'Sense_schaerfen',
+  'Moped',
+  'Kuh',
 ] as const
 
 export type ICardName = typeof ALL_CARD_NAMES[number]

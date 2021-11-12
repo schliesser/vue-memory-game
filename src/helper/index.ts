@@ -18,6 +18,10 @@ export function getHighestRecord(): number {
   return 9999
 }
 
+export function getCardsCount(): number {
+  return ALL_CARD_NAMES.length
+}
+
 export function saveHighestRecord(score: number): void {
   const savedTopScore = localStorage.getItem('highestRecord')
   if (!savedTopScore) {

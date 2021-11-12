@@ -36,12 +36,14 @@ export default defineComponent({
           dispatch('updateStatus', IStatus.PASSED)
         }
         return
+      } else {
+        commit('changeStatus', IStatus.WAITING)
       }
 
       const savedLastCard = lastCard.value
       lastCard.value = null
       dispatch('flipsDelay', {
-        timeout: 1000,
+        timeout: 6000,
         cards: [savedLastCard, e]
       })
     }
@@ -56,32 +58,12 @@ export default defineComponent({
 
 <style scoped>
 .chessboard {
-  margin-top: 20px;
-  width: 100%;
-  background-color: #fff;
-  height: 530px;
-  border-radius: 4px;
-  padding: 10px 5px;
+  max-width: 80%;
+  margin: 40px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: space-around;
-}
-
-.container:nth-child(4n) {
-  margin-right: 0px;
-}
-
-@media screen and (max-width: 450px) {
-  .chessboard {
-    height: 480px;
-    padding: 10px 0px;
-  }
-}
-@media screen and (max-width: 370px) {
-  .chessboard {
-    height: 450px;
-  }
 }
 </style>
